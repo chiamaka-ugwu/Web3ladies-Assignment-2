@@ -64,6 +64,24 @@
 					},
 					{
 						"internalType": "address payable",
+						"name": "receiver",
+						"type": "address"
+					}
+				],
+				"name": "transfer",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address payable",
 						"name": "destAddr",
 						"type": "address"
 					}
@@ -106,11 +124,11 @@
 	},
 	"sources": {
 		"contracts/_WalletApplication.sol": {
-			"keccak256": "0x793caedf5c6073c823aab4ce14df74437989cf4ffa3127584ebd4f33ada05303",
+			"keccak256": "0xf977d86ad344d9ee951e970b0a227d53737a52f323b608c96f6f65d104b08740",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://baf9201bfc10cae38476b2bc31a7a5b6d0aa52a35c4bd3644d3a3deb07a06378",
-				"dweb:/ipfs/Qmbsi2rKPoiH6oyUn7b88T2jh6sg1Lk9qQnqHw1eBLCndz"
+				"bzz-raw://9e0dd32255e4542317319a830dc393626393042102ec61deb55be3f857f327de",
+				"dweb:/ipfs/QmbmvLyMBUNFgLMh9ihZ89xaZr6FgrrWycwA6z6tuvBR8q"
 			]
 		}
 	},

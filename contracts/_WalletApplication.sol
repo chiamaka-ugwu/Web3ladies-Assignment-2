@@ -18,6 +18,11 @@ contract WalletApp {
         _;
     }
 
+    modifier funds(uint amount) {
+        require (amount <= balance, 'Insufficient funds');
+        _;
+    }
+
     event Success (address owner, string message);
 
     function withdraw(uint amount, address payable destAddr) public ownerOnly {
@@ -25,6 +30,12 @@ contract WalletApp {
         destAddr.transfer(amount);
         balance -= amount;
         emit Success(msg.sender, 'Congrats, your transaction has been processed!');        
+    }
+
+    function transfer(uint amount, address payable receiver) external funds(amount) {
+        receiver.transfer(amount);
+        balance -= amount;
+        emit Success(msg.sender, 'Congrats, transfer complete!'); 
     }
 }
 
